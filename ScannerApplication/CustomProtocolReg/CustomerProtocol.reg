@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\scanner]
+@="URL:Scanner Protocol"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\scanner\shell]
+
+[HKEY_CLASSES_ROOT\scanner\shell\open]
+
+[HKEY_CLASSES_ROOT\scanner\shell\open\command]
+@="\"C:\\Users\\ASUS\\source\\repos\\ScannerApp\\ScannerApp\\bin\\Debug\\ScannerApp.exe\" \"%1\""

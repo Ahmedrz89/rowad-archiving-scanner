@@ -1,0 +1,107 @@
+[
+  {
+    "id": 0,
+    "name": "Id Face",
+    "name_ar": "هوية الاحوال مدنية - وجه"
+  },
+  {
+    "id": 1,
+    "name": "Id Back",
+    "name_ar": "هوية الاحوال مدنية - ظهر"
+  },
+  {
+    "id": 2,
+    "name": "Certificate Face",
+    "name_ar": "شهادة جنسية - وجه"
+  },
+  {
+    "id": 3,
+    "name": "Certificate Back",
+    "name_ar": "شهادة جنسية - وجه"
+  },
+  {
+    "id": 4,
+    "name": "Unified Card Face",
+    "name_ar": "بطافة موحدة - وجه"
+  },
+  {
+    "id": 5,
+    "name": "Certificate Back",
+    "name_ar": "بطاقة موحدة - وجه"
+  },
+  {
+    "id": 6,
+    "name": "Passport",
+    "name_ar": "جواز سفر"
+  },
+  {
+    "id": 7,
+    "name": "Residence Card Face",
+    "name_ar": "بطاقة سكن - وجه"
+  },
+  {
+    "id": 8,
+    "name": "Residence Card Back",
+    "name_ar": "بطاقة سكن -ظهر"
+  },
+  {
+    "id": 9,
+    "name": "Residence Confirmation",
+    "name_ar": "تأييد سكن"
+  },
+  {
+    "id": 10,
+    "name": "Employment Card Face",
+    "name_ar": "بطاقة وظيفية - وجه"
+  },
+  {
+    "id": 11,
+    "name": "Employment Card Back",
+    "name_ar": "بطاقة وظيفية - ظهر"
+  },
+  {
+    "id": 12,
+    "name": "Personal Attachments Face",
+    "name_ar": "مستمسكات - وجه"
+  },
+  {
+    "id": 13,
+    "name": "Personal Attachments Back",
+    "name_ar": "مستمسكات - ظهر"
+  },
+  {
+    "id": 14,
+    "name": "RealEstate Document 25",
+    "name_ar": "سند العقار نموذج 25"
+  },
+  {
+    "id": 15,
+    "name": "RealEstate Document 23",
+    "name_ar": "سند العقار نموذج 23"
+  },
+  {
+    "id": 16,
+    "name": "RealEstate Map",
+    "name_ar": "خارطة العقار"
+  },
+  {
+    "id": 17,
+    "name": "Formal Documents",
+    "name_ar": "الكتب الرسمية"
+  },
+  {
+    "id": 18,
+    "name": "Report",
+    "name_ar": "تقرير الكشف"
+  },
+  {
+    "id": 19,
+    "name": "Check Document 47",
+    "name_ar": "سجل اعمال الكشف نموذج 47"
+  },
+  {
+    "id": 20,
+    "name": "Sample 59",
+    "name_ar": "نموذج 59"
+  }
+]
