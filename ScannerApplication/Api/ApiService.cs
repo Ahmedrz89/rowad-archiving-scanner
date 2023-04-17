@@ -35,6 +35,9 @@ namespace ScannerApplication.Api
 
                 form.Add(fileContent, "files", "filename.jpeg");
             }
+            var token = await GetToken().ConfigureAwait(false);
+            // Set Bearer token in request headers
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = await httpClient.PostAsync(attachmentUploadEndpoint, form).ConfigureAwait(false);
             response.EnsureSuccessStatusCode();
             var responseContent = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
@@ -52,8 +55,8 @@ namespace ScannerApplication.Api
             {
                 realEstateAddAttachmentInput.Attachments.Add(new AttachmentInput()
                 {
-                    AttachmentType = attachments[i].FileType.Id,
-                    Id = jsonResult.Result[i]
+                    DocumentTypeId = attachments[i].FileType.Id,
+                    AttachmentId = jsonResult.Result[i]
                 });
             }
 
@@ -72,7 +75,7 @@ namespace ScannerApplication.Api
             {
                 BaseAddress = new Uri(baseUrl)
             };
-            var token = await GetToken();
+            var token = await GetToken().ConfigureAwait(false);
             // Set Bearer token in request headers
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = await httpClient.GetAsync(getDocumentTypesEndpoint).ConfigureAwait(false);

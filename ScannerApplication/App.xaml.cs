@@ -29,6 +29,7 @@ namespace ScannerApplication
                 // Attempt to parse the extracted GUID as a Guid
                 if (Guid.TryParse(guidString, out Guid realEstateId))
                 {
+                    //MessageBox.Show(realEstateId.ToString());
                     MainWindow mainWindow = new MainWindow(realEstateId);
                     mainWindow.Show();
                 }
@@ -38,8 +39,11 @@ namespace ScannerApplication
                     Current.Shutdown();
                 }
             }
-            MessageBox.Show("No arguments.");
-            Current.Shutdown();
+            else
+            {
+                MessageBox.Show("No arguments.");
+                Current.Shutdown();
+            }
 
         }
 

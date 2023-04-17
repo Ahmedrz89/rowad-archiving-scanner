@@ -17,7 +17,7 @@ namespace ScannerApplication.Models
     
     public class AttachmentInput
     {
-        public Guid Id { get; set; }
-        public int AttachmentType { get; set; }
+        public Guid AttachmentId { get; set; }
+        public int DocumentTypeId { get; set; }
     }
 }

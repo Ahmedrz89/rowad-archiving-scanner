@@ -18,7 +18,6 @@ namespace ScannerApplication
             _realEstateId = realEstateId;
             InitializeComponent();
             _viewModel = this.Resources["ViewModel"] as ViewModel;
-            if (_viewModel != null) _viewModel.ApiService = new ApiService();
         }
 
         private void cardView_Loaded(object sender, RoutedEventArgs e)
@@ -67,8 +66,8 @@ namespace ScannerApplication
                 }
 
                 await _viewModel.ApiService.AddAttachments(_realEstateId, _viewModel.Attachments.ToList());
-                MessageBox.Show("Attachments Uploaded");
-                Clear();
+                //MessageBox.Show("Attachments Uploaded");
+                Close();
 
             }
             catch (Exception exception)

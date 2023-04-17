@@ -6,7 +6,7 @@
                 Title="المرفقات" Height="350" Width="525" FontSize="12" WindowState="Maximized" WindowStartupLocation="CenterScreen" FlowDirection="RightToLeft" FontFamily="Droid Arabic Kufi">
     <Window.Resources>
         <local:ViewModel x:Key="ViewModel"/>
-        <telerik:QueryableCollectionViewSource Source="{Binding Attachments, Source={StaticResource ViewModel}}" x:Key="qcvs"/>
+        <!--<telerik:QueryableCollectionViewSource Source="{Binding Attachments, Source={StaticResource ViewModel}}" x:Key="qcvs"/>-->
 
     </Window.Resources>
     <Grid DataContext="{StaticResource ViewModel}">
@@ -40,11 +40,11 @@
                         </DataTemplate>
                     </telerik:CardDataFieldDescriptor.ReadOnlyTemplate>
                 </telerik:CardDataFieldDescriptor>
-                <telerik:CardDataFieldDescriptor Header="نوع الملف" DataMemberBinding="{Binding FileType.AttachmentTypeName}">
+                <telerik:CardDataFieldDescriptor Header="نوع الملف" DataMemberBinding="{Binding FileType.DisplayName}">
                     <telerik:CardDataFieldDescriptor.EditorTemplate>
                         <DataTemplate>
                             <telerik:RadComboBox Width="300"  ItemsSource="{Binding FileTypes, Source={StaticResource ViewModel}}" 
-                                                 SelectedItem="{Binding FileType, Mode=TwoWay}" SelectedValuePath="AttachmentTypeId" DisplayMemberPath ="AttachmentTypeName"/>
+                                                 SelectedItem="{Binding FileType, Mode=TwoWay}" SelectedValuePath="Id" DisplayMemberPath ="DisplayName"/>
                         </DataTemplate>
                     </telerik:CardDataFieldDescriptor.EditorTemplate>
                 </telerik:CardDataFieldDescriptor>

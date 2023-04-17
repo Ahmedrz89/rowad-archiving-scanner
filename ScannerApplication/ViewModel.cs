@@ -10,11 +10,18 @@ namespace ScannerApplication
 {
     public class ViewModel
     {
-        public ApiService ApiService { get; set; }
+        public ViewModel()
+        {
+            ApiService = new ApiService();
+        }
+
+        public ApiService ApiService { get; }
         private ObservableCollection<AttachmentTypeDto> _fileTypes;
         public ObservableCollection<AttachmentTypeDto> FileTypes => _fileTypes = _fileTypes ?? GetFileTypes();
         private ObservableCollection<AttachmentDto> _attachments;
         public ObservableCollection<AttachmentDto> Attachments => _attachments = _attachments ?? new ObservableCollection<AttachmentDto>();
+        //public ObservableCollection<AttachmentDto> Attachments => _attachments = _attachments ?? GetTestData();
+        
 
         public ObservableCollection<AttachmentDto> GetTestData()
         {
@@ -39,25 +46,9 @@ namespace ScannerApplication
         private ObservableCollection<AttachmentTypeDto> GetFileTypes()
         {
 
-            //// Get the path to the application folder
-            //string appFolderPath = AppDomain.CurrentDomain.BaseDirectory;
+            if (ApiService == null)
+                return new ObservableCollection<AttachmentTypeDto>();
 
-            //// Construct the path to the file
-            //string filePath = Path.Combine(appFolderPath, "FileTypes.json");
-            //var jsonResult = JsonSerializer.Deserialize<List<JsonFileType>>(File.ReadAllText(filePath));
-            //var result = new ObservableCollection<AttachmentTypeDto>();
-
-            //if (jsonResult != null)
-            //    foreach (var file in jsonResult)
-            //    {
-            //        result.Add(new AttachmentTypeDto()
-            //        {
-            //            Id = file.Id,
-            //            DisplayName = file.ArabicName
-            //        });
-            //    }
-
-            //return result;
             var docs = ApiService.GetDocumentTypes().GetAwaiter().GetResult();
             return new ObservableCollection<AttachmentTypeDto>(docs);
         }
